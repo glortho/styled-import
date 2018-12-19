@@ -8,7 +8,7 @@
 .bar	external.css	/^.bar {$/;"	c
 .baz	external.css	/^.baz {$/;"	c
 .foo .section	external.css	/^.foo .section {$/;"	c
-0	package.json	/^  "keywords": ["babel-plugin-macros"],$/;"	s	array:keywords
+0	package.json	/^    "babel-plugin-macros"$/;"	s	array:keywords
 @babel/helper-annotate-as-pure	package-lock.json	/^        "@babel\/helper-annotate-as-pure": "^7.0.0",$/;"	s	object:dependencies.babel-plugin-styled-components.requires
 @babel/helper-annotate-as-pure	package-lock.json	/^    "@babel\/helper-annotate-as-pure": {$/;"	o	object:dependencies
 @babel/helper-module-imports	package-lock.json	/^        "@babel\/helper-module-imports": "^7.0.0",$/;"	s	object:dependencies.babel-plugin-styled-components.requires
@@ -2106,7 +2106,7 @@ json-schema-traverse	package-lock.json	/^    "json-schema-traverse": {$/;"	o	obj
 json5	package-lock.json	/^        "json5": "^0.5.0"$/;"	s	object:dependencies.loader-utils.requires
 json5	package-lock.json	/^        "json5": "^0.5.1",$/;"	s	object:dependencies.babel-core.requires
 json5	package-lock.json	/^    "json5": {$/;"	o	object:dependencies
-keywords	package.json	/^  "keywords": ["babel-plugin-macros"],$/;"	a
+keywords	package.json	/^  "keywords": [$/;"	a
 kind-of	package-lock.json	/^                "kind-of": "^3.0.2"$/;"	s	object:dependencies.readdirp.dependencies.expand-brackets.dependencies.is-accessor-descriptor.requires
 kind-of	package-lock.json	/^                "kind-of": "^3.0.2"$/;"	s	object:dependencies.readdirp.dependencies.expand-brackets.dependencies.is-data-descriptor.requires
 kind-of	package-lock.json	/^                "kind-of": "^3.0.2"$/;"	s	object:dependencies.watchpack.dependencies.expand-brackets.dependencies.is-accessor-descriptor.requires
@@ -4763,9 +4763,9 @@ version	package-lock.json	/^      "version": "7.1.5",$/;"	s	object:dependencies.
 version	package-lock.json	/^      "version": "7.2.2",$/;"	s	object:dependencies.@babel/types
 version	package-lock.json	/^      "version": "7.3.1",$/;"	s	object:dependencies.promise
 version	package-lock.json	/^      "version": "9.18.0",$/;"	s	object:dependencies.globals
-version	package-lock.json	/^  "version": "1.0.0",$/;"	s
+version	package-lock.json	/^  "version": "0.1.1",$/;"	s
 version	package.example.json	/^  "version": "0.1.0",$/;"	s
-version	package.json	/^  "version": "0.1.0",$/;"	s
+version	package.json	/^  "version": "0.1.1",$/;"	s
 vm-browserify	package-lock.json	/^        "vm-browserify": "0.0.4"$/;"	s	object:dependencies.node-libs-browser.requires
 vm-browserify	package-lock.json	/^    "vm-browserify": {$/;"	o	object:dependencies
 watchpack	package-lock.json	/^        "watchpack": "^1.5.0",$/;"	s	object:dependencies.webpack.requires
