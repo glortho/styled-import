@@ -65,6 +65,20 @@ const Button = styled.button`
 `
 ```
 
+String composition works like inheritance/cascade:
+
+```
+const btnBlue = styledImport('./stylesheets/global.css', '.button-blue')
+
+const Button = styled.button`
+  color: green;
+  padding: 10px;
+  ${btnBlue}
+`
+
+// color: green is overridden by color: blue in btnBlue
+```
+
 #### Import from node_modules stylesheet
 
 ```javascript
