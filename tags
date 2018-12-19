@@ -4764,9 +4764,9 @@ version	package-lock.json	/^      "version": "7.1.5",$/;"	s	object:dependencies.
 version	package-lock.json	/^      "version": "7.2.2",$/;"	s	object:dependencies.@babel/types
 version	package-lock.json	/^      "version": "7.3.1",$/;"	s	object:dependencies.promise
 version	package-lock.json	/^      "version": "9.18.0",$/;"	s	object:dependencies.globals
-version	package-lock.json	/^  "version": "0.1.2",$/;"	s
+version	package-lock.json	/^  "version": "0.1.3",$/;"	s
 version	package.example.json	/^  "version": "0.1.0",$/;"	s
-version	package.json	/^  "version": "0.1.2",$/;"	s
+version	package.json	/^  "version": "0.1.3",$/;"	s
 vm-browserify	package-lock.json	/^        "vm-browserify": "0.0.4"$/;"	s	object:dependencies.node-libs-browser.requires
 vm-browserify	package-lock.json	/^    "vm-browserify": {$/;"	o	object:dependencies
 watchpack	package-lock.json	/^        "watchpack": "^1.5.0",$/;"	s	object:dependencies.webpack.requires
