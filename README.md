@@ -79,9 +79,21 @@ const [ btnStyle, headerStyle ] = styledImport('@org/stylesheets/global.css', ['
 const { button, header } = styledImport('@org/stylesheets/global.css', {button: '.button', header: '.header'})
 ```
 
+#### Import nested styles
+
+```javascript
+const cardBtnStyle = styledImport('./stylesheets/global.css', '.card .button')
+```
+
 ## Restrictions
 
 - This currently only works with static values. Dynamic arguments can/will
   break it. Some dynamic support is coming soon.
+- Selectors passed as arguments must match stylesheet selectors exactly. Partial matches/regex matches coming soon.
+- There is no de-duplication or other optimizations at this time. Currently styled-import just copies out the rules from the classes. It does not import the whole stylesheet into your bundle. Optimizations coming soon.
 - See the warning at top -- this is experimental and untested in many
-  environments! Production-ready version coming soon.
+  environments! Production-ready version...you guessed it...is coming soon.
+
+## Motivation
+
+Working with global or 3rd party CSS creates constant challenges when implementing other CSS solutions. This is meant to ease some of the pain.
