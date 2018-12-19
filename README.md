@@ -77,6 +77,14 @@ const Button = styled.button`
 // color: green is overridden by color: blue in btnBlue
 ```
 
+#### Use with React or other CSS-in-JS
+
+```javascript
+const btnStyle = styledImport.react('./stylesheets/global.css', '.button')
+
+// btnStyle is now an object {'color': 'blue'} with camelCased properties, instead of a CSS string
+```
+
 #### Import from node_modules stylesheet
 
 ```javascript
