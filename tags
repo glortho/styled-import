@@ -2668,6 +2668,7 @@ repeat-string	package-lock.json	/^        "repeat-string": "^1.6.1"$/;"	s	object
 repeat-string	package-lock.json	/^    "repeat-string": {$/;"	o	object:dependencies
 repeating	package-lock.json	/^        "repeating": "^2.0.0"$/;"	s	object:dependencies.detect-indent.requires
 repeating	package-lock.json	/^    "repeating": {$/;"	o	object:dependencies
+repository	package.json	/^  "repository": "https:\/\/github.com\/glortho\/styled-import",$/;"	s
 require-directory	package-lock.json	/^        "require-directory": "^2.1.1",$/;"	s	object:dependencies.yargs.requires
 require-directory	package-lock.json	/^    "require-directory": {$/;"	o	object:dependencies
 require-main-filename	package-lock.json	/^        "require-main-filename": "^1.0.1",$/;"	s	object:dependencies.yargs.requires
@@ -4763,9 +4764,9 @@ version	package-lock.json	/^      "version": "7.1.5",$/;"	s	object:dependencies.
 version	package-lock.json	/^      "version": "7.2.2",$/;"	s	object:dependencies.@babel/types
 version	package-lock.json	/^      "version": "7.3.1",$/;"	s	object:dependencies.promise
 version	package-lock.json	/^      "version": "9.18.0",$/;"	s	object:dependencies.globals
-version	package-lock.json	/^  "version": "0.1.1",$/;"	s
+version	package-lock.json	/^  "version": "0.1.2",$/;"	s
 version	package.example.json	/^  "version": "0.1.0",$/;"	s
-version	package.json	/^  "version": "0.1.1",$/;"	s
+version	package.json	/^  "version": "0.1.2",$/;"	s
 vm-browserify	package-lock.json	/^        "vm-browserify": "0.0.4"$/;"	s	object:dependencies.node-libs-browser.requires
 vm-browserify	package-lock.json	/^    "vm-browserify": {$/;"	o	object:dependencies
 watchpack	package-lock.json	/^        "watchpack": "^1.5.0",$/;"	s	object:dependencies.webpack.requires

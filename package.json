@@ -10,6 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "jed@dataverse.me",
+  "repository": "https://github.com/glortho/styled-import",
   "license": "MIT",
   "devDependencies": {
     "babel-plugin-macros": "^2.4.3",
