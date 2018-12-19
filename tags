@@ -99,6 +99,7 @@ React	app.js	/^const React = require('react');$/;"	C
 ReactDOM	example.js	/^const ReactDOM = require('react-dom')$/;"	C
 Restrictions	README.md	/^## Restrictions$/;"	s
 Styled Import	README.md	/^# Styled Import$/;"	c
+Test	README.md	/^## Test$/;"	s
 Title	app.js	/^const Title = styled.div`$/;"	C
 Use	README.md	/^## Use$/;"	s
 Use with Styled Components	README.md	/^#### Use with Styled Components$/;"	t
