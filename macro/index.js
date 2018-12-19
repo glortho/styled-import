@@ -1,4 +1,4 @@
-const fs   = require('fs');
+fs   = require('fs');
 const path = require('path');
 const css  = require('css');
 
@@ -26,9 +26,12 @@ const stringifyDeclarations = declarations =>
   declarations.map(item => `${item.property}: ${item.value}`).join('\n') + '\n'
 
 const parseArrayOfSelectors = (cssRules, elements, babel) => {
-  const declarations = cssRules
-    .filter( rule => rule.selectors.some( selector => !!elements.find(node => node.value === selector) ))
-    .map( rule => babel.types.stringLiteral(stringifyDeclarations(rule.declarations)) )
+  const declarations = cssRules.map( rule => {
+    const ruleExists = rule.selectors.some( selector => !!elements.find(node => node.value === selector) )
+    return ruleExists
+      ? babel.types.stringLiteral(stringifyDeclarations(rule.declarations))
+      : babel.types.nullLiteral()
+  })
   return babel.types.ArrayExpression(declarations)
 }
 
@@ -39,8 +42,11 @@ const parseObjectOfSelectors = (cssRules, properties, babel) => {
     const rule = cssRules
       .find( rule => rule.selectors.some( selector => selector === value ))
     return babel.types.objectProperty(
-      babel.types.stringLiteral(key),
-      babel.types.stringLiteral( rule ? stringifyDeclarations(rule.declarations) : rule )
+      babel.types.stringLiteral(key), (
+        rule
+          ? babel.types.stringLiteral(stringifyDeclarations(rule.declarations))
+          : babel.types.nullLiteral()
+      )
     )
   });
   return babel.types.ObjectExpression(declarations)
@@ -48,8 +54,12 @@ const parseObjectOfSelectors = (cssRules, properties, babel) => {
 
 const parseStringOfSelectors = (cssRules, value, babel) => {
   const rules = cssRules.find( rule => rule.selectors.some( selector => selector === value ))
-  const declarations = stringifyDeclarations(rules.declarations)
-  return babel.types.stringLiteral(declarations)
+  if (rules) {
+    const declarations = stringifyDeclarations(rules.declarations)
+    return babel.types.stringLiteral(declarations)
+  } else {
+    return babel.types.nullLiteral()
+  }
 }
 
 const parseAst = (modulePath, cssPath) => {
