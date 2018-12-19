@@ -1,29 +1,16 @@
 {
-  "name": "styled-plus",
-  "version": "0.2.1",
+  "name": "styled-import",
+  "version": "0.2.2",
   "description": "Extreme lightweight CSS parser for stealing rules from stylesheets (without adding the stylesheet to your bundle), to compose into Styled Components or anywhere else you might be doing CSS in JS.",
+  "keywords": [
+    "babel-plugin-macros"
+  ],
   "main": "index.js",
-  "scripts": {
-    "test": "jest"
-  },
   "author": "jed@dataverse.me",
   "repository": "https://github.com/glortho/styled-import",
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
     "babel-plugin-macros": "^2.4.3",
-    "babel-plugin-tester": "^5.5.2",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "css": "^2.2.4",
-    "jest": "^23.6.0",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "styled-components": "^4.1.3",
-    "webpack": "^4.27.1",
-    "webpack-cli": "^3.1.2"
+    "css": "^2.2.4"
   }
 }
