@@ -4,7 +4,7 @@
 
 [![Babel Macro](https://img.shields.io/badge/babel--macro-%F0%9F%8E%A3-f5da55.svg?style=flat-square)](https://github.com/kentcdodds/babel-plugin-macros)
 
-*NOTE*: This library is currently experimental. Unit tests are not yet in place, code is a bit dirty and not commented, etc. Use in production at your own risk!
+*NOTE*: This library is currently experimental. The code is a bit dirty and not commented, etc. Use in production at your own risk!
 
 ## Installation
 
