@@ -1,14 +1,11 @@
 {
   "name": "styled-import",
-  "version": "0.2.0",
-  "description": "",
+  "version": "0.2.1",
+  "description": "Extreme lightweight CSS parser for stealing rules from stylesheets (without adding the stylesheet to your bundle), to compose into Styled Components or anywhere else you might be doing CSS in JS.",
   "keywords": [
     "babel-plugin-macros"
   ],
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "jed@dataverse.me",
   "repository": "https://github.com/glortho/styled-import",
   "license": "MIT",
