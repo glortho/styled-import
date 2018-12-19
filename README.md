@@ -114,8 +114,7 @@ Coming soon
 
 - This currently only works with static values. Dynamic arguments can/will
   break it. Some dynamic support is coming soon.
-- For now, only stringified, valid CSS declarations are returned. Support for
-  object formatted return values coming soon.
+- Better error handling coming soon!
 - Selectors passed as arguments must match stylesheet selectors exactly. Partial matches/regex matches coming soon.
 - There is no de-duplication or other optimizations at this time. Currently styled-import just copies out the rules from the classes. It does not import the whole stylesheet into your bundle. Optimizations coming soon.
 - See the warning at top -- this is experimental and untested in many
