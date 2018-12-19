@@ -27,7 +27,7 @@ function styleImportMacro({references, state, babel}) {
       selectorArg.value ?
         declarationMethods.byString(selectorArg.value) :
       selectorArg.elements ?
-        declarations.byArray(selectorArg.elements) :
+        declarationMethods.byArray(selectorArg.elements) :
       declarationMethods.byObject(selectorArg.properties)
     )
 
@@ -41,7 +41,7 @@ function styleImportMacro({references, state, babel}) {
 const getDeclarationMethods = (cssRules, babel, options = {}) => {
 
   const stringifyDeclarations = declarations =>
-    declarations.map(item => `${item.property}: ${item.value}`).join('\n') + '\n'
+    declarations.map(item => `${item.property}: ${item.value};`).join('\n')
 
   const objectifyDeclarations = declarations =>
     declarations.map(item => babel.types.objectProperty(
@@ -54,9 +54,9 @@ const getDeclarationMethods = (cssRules, babel, options = {}) => {
     : babel.types.ObjectExpression(objectifyDeclarations(rule.declarations))
 
   const byArray = elements => {
-    const declarations = cssRules.map( rule => {
-      const ruleExists = rule.selectors.some( selector => !!elements.find(node => node.value === selector) )
-      return ruleExists
+    const declarations = elements.map( node => {
+      const rule = cssRules.find( rule => rule.selectors.some( selector => node.value === selector) )
+      return rule
         ? formatDeclarations(rule)
         : babel.types.nullLiteral()
     })

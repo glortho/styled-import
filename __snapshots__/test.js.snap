@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`macros removes when not used: removes when not used 1`] = `
+"
+const styledImport = require('./macro')
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+
+"
+`;
