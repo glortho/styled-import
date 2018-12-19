@@ -6,4 +6,7 @@ external.css
 index.html
 node_modules
 package.example.json
+tags
+tags.lock
+tags.temp
 webpack.config.js
