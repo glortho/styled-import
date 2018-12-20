@@ -6,8 +6,13 @@
 [![Babel Macro](https://img.shields.io/badge/babel--macro-%F0%9F%8E%A3-f5da55.svg?style=flat-square)](https://github.com/kentcdodds/babel-plugin-macros)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/glortho/styled-import/issues)
 
+## Motivation
 
-*NOTE*: This library is currently experimental. The code is a bit dirty and not commented, etc. Use in production at your own risk!
+Working with global or 3rd party CSS creates constant challenges when implementing other CSS solutions. This is meant to ease some of the pain by letting you steal styles from those stylesheets without needing to link or bundle or otherwise include the stylesheets themselves.
+
+Note that this library currently operates as a Babel macro, replacing all
+references to styled-import calls with the actual style declarations from the
+referenced stylesheets.
 
 ## Installation
 
@@ -128,6 +133,3 @@ published npm module.
 - See the warning at top -- this is experimental and untested in many
   environments! Production-ready version...you guessed it...is coming soon.
 
-## Motivation
-
-Working with global or 3rd party CSS creates constant challenges when implementing other CSS solutions. This is meant to ease some of the pain.
