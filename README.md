@@ -2,7 +2,10 @@
 # Styled Import
 > Extreme lightweight CSS parser for stealing rules from stylesheets (without adding the stylesheet to your bundle), to compose into [Styled Components](https://www.styled-components.com/) or anywhere else you might be doing CSS in JS.
 
+[![npm package](https://badge.fury.io/js/styled-import.svg)](https://badge.fury.io/js/styled-import)
 [![Babel Macro](https://img.shields.io/badge/babel--macro-%F0%9F%8E%A3-f5da55.svg?style=flat-square)](https://github.com/kentcdodds/babel-plugin-macros)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/glortho/styled-import/issues)
+
 
 *NOTE*: This library is currently experimental. The code is a bit dirty and not commented, etc. Use in production at your own risk!
 
