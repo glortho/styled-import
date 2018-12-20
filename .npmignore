@@ -1,9 +1,5 @@
 .babelrc
 .tern-port
-app.js
-example.js
-external.css
-index.html
 node_modules
 package.dev.json
 scripts
