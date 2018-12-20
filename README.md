@@ -116,8 +116,10 @@ const cardBtnStyle = styledImport('./stylesheets/global.css', '.card .button')
 
 ## Test
 
+Make sure you're on the development branch and then:
+
 ```
-$ npm run dev && npm test
+$ npm test
 ```
 
 NOTE: Tests will only run in a git cloned repo. They are disabled in the
