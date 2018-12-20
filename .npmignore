@@ -5,7 +5,8 @@ example.js
 external.css
 index.html
 node_modules
-package.example.json
+package.dev.json
+scripts
 tags
 tags.lock
 tags.temp

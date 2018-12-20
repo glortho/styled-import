@@ -4,7 +4,10 @@
   "description": "Extreme lightweight CSS parser for stealing rules from stylesheets (without adding the stylesheet to your bundle), to compose into Styled Components or anywhere else you might be doing CSS in JS.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "copy-test-files": "mkdir node_modules/_styled_tester > /dev/null 2>&1; cp test.css node_modules/_styled_tester > /dev/null 2>&1",
+    "dev": "./scripts/dev.sh",
+    "prepublish": "./scripts/prepublish.sh",
+    "test": "npm run copy-test-files; jest"
   },
   "author": "jed@dataverse.me",
   "repository": "https://github.com/glortho/styled-import",
