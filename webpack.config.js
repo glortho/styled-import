@@ -1,9 +1,10 @@
 const path = require('path');
 
 module.exports = {
-  entry: './example.js',
+  mode: 'development',
+  entry: path.join(__dirname, 'examples', 'index.js'),
   output: {
-    path: __dirname,
+    path: path.join(__dirname, 'examples'),
     filename: 'bundle.js'
   },
   module: {
