@@ -57,7 +57,7 @@ const btnStyle = styledImport('./stylesheets/global.css', '.button')
 console.log(btnStyle) // 'color: blue;'
 ```
 
-#### Use with Styled Components
+### Use with Styled Components
 
 ```javascript
 const styled = require('styled-components')
@@ -85,7 +85,7 @@ const Button = styled.button`
 // color: green is overridden by color: blue in btnBlue
 ```
 
-#### Use with React or other CSS-in-JS
+### Use with React or other CSS-in-JS
 
 ```javascript
 const btnStyle = styledImport.react('./stylesheets/global.css', '.button')
@@ -93,13 +93,13 @@ const btnStyle = styledImport.react('./stylesheets/global.css', '.button')
 // btnStyle is now an object {'color': 'blue'} with camelCased properties, instead of a CSS string
 ```
 
-#### Import from node_modules stylesheet
+### Import from node_modules stylesheet
 
 ```javascript
 const btnStyle = styledImport('@org/stylesheets/global.css', '.button')
 ```
 
-#### Import multiple styles
+### Import multiple styles
 
 
 ```javascript
@@ -108,7 +108,7 @@ const [ btnStyle, headerStyle ] = styledImport('@org/stylesheets/global.css', ['
 const { button, header } = styledImport('@org/stylesheets/global.css', {button: '.button', header: '.header'})
 ```
 
-#### Import nested styles
+### Import nested styles
 
 ```javascript
 const cardBtnStyle = styledImport('./stylesheets/global.css', '.card .button')
@@ -120,7 +120,7 @@ const cardBtnStyle = styledImport('./stylesheets/global.css', '.card .button')
 $ npm run dev && npm test
 ```
 
-NOTE: Tests will only run in git cloned repo. They are disabled in the
+NOTE: Tests will only run in a git cloned repo. They are disabled in the
 published npm module.
 
 ## Restrictions
