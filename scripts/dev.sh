@@ -1,5 +1,5 @@
 #!/bin/bash
 
-mv package{,.lib}.json
+mv package{,.npm}.json
 mv package{.dev,}.json
 npm i

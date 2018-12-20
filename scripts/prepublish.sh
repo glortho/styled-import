@@ -2,6 +2,6 @@
 
 npm test
 mv package{,.dev}.json
-mv package{.lib,}.json
+mv package{.npm,}.json
 npm i
 
