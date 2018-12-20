@@ -11,10 +11,17 @@ function styleImportMacro({references, state, babel}) {
 
     const { node } = referencePath.parentPath;
 
+    // if there is a property on the node it means the user is using
+    // the styledImport.<property>(...) option, for example:
+    //
+    //   styledImport.react(...)
+    //
     const format = node.property
       ? node.property.name
       : 'string'
 
+    // TODO: what is the proper way to get arguments when using the property
+    // format?
     const [ cssPathArg, selectorArg ] = node.property
       ? referencePath.parentPath.parent.arguments
       : referencePath.parentPath.get('arguments').map( arg => arg.node )
@@ -28,6 +35,8 @@ function styleImportMacro({references, state, babel}) {
         declarationMethods.byString(selectorArg.value) :
       selectorArg.elements ?
         declarationMethods.byArray(selectorArg.elements) :
+      selectorArg.pattern ?
+        declarationMethods.byRegex(selectorArg) :
       declarationMethods.byObject(selectorArg.properties)
     )
 
@@ -87,15 +96,31 @@ const getDeclarationMethods = (cssRules, babel, options = {}) => {
       : babel.types.nullLiteral()
   }
 
-  return { byString, byArray, byObject }
+  const byRegex = ({pattern, flags}) => {
+    const regex = new RegExp(pattern, flags)
+    if (!~flags.indexOf('g')) {
+      const rule = cssRules.find( rule => rule.selectors.some( selector => regex.test(selector)))
+      return rule
+        ? formatDeclarations(rule)
+        : babel.types.nullLiteral()
+    } else {
+      const declarations = cssRules
+        .filter( rule => rule.selectors.some( selector => regex.test(selector)))
+        .map( formatDeclarations )
+      return babel.types.ArrayExpression(declarations)
+    }
+  }
+
+  return { byRegex, byString, byArray, byObject }
 }
 
 const parseAst = (modulePath, cssPath) => {
-  // TODO: require.resolve?
+
   const pathHint = modulePath.charAt(0)
   const pathReference = pathHint === '/'
     ? path.dirname(modulePath)
     : path.join(process.cwd(), path.dirname(modulePath))
+
   const cssPathHint = cssPath.charAt(0)
   const cssPathReference = (
     cssPathHint === '/' ?

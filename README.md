@@ -114,6 +114,15 @@ const {button, header} = styledImport('@org/styles/global.css', {button: '.butto
 const cardBtnStyle = styledImport('./stylesheets/global.css', '.card .button')
 ```
 
+### Search selectors with regular expressions
+
+```javascript
+const cardBtnStyle = styledImport('./stylesheets/global.css', /\.button/gi)
+
+// returns an array of declarations from selectors that matched the regex (omit
+g flag to return just the first match)
+```
+
 ## Test
 
 ```
