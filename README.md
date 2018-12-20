@@ -11,7 +11,7 @@
 Working with global or 3rd party CSS creates constant challenges when implementing other CSS solutions. This is meant to ease some of the pain by letting you steal styles from those stylesheets without needing to link or bundle or otherwise include the stylesheets themselves.
 
 Note that this library currently operates as a Babel macro, replacing all
-references to styled-import calls with the actual style declarations from the
+references to styled-import calls at compile-time with the actual style declarations from the
 referenced stylesheets.
 
 ## Installation
