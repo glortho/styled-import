@@ -103,9 +103,9 @@ const btnStyle = styledImport('@org/stylesheets/global.css', '.button')
 
 
 ```javascript
-const [ btnStyle, headerStyle ] = styledImport('@org/stylesheets/global.css', ['.button', '.header'])
+const [btnStyle, headerStyle] = styledImport('@org/styles/global.css', ['.button', '.header'])
 
-const { button, header } = styledImport('@org/stylesheets/global.css', {button: '.button', header: '.header'})
+const {button, header} = styledImport('@org/styles/global.css', {button: '.button', header: '.header'})
 ```
 
 ### Import nested styles
