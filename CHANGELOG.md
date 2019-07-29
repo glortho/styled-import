@@ -12,6 +12,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [0.3.3] - 2019-07-29
+
+### Fixed
+
+- Security fixes for lodash
+
+## [0.3.2] - 2019-07-29
+
+### Fixed
+
+- Moved runtime dependencies out of devDependencies and into dependencies
+  (fixes [#2](https://github.com/glortho/styled-import/issues/2))
 
 ## [0.3.0] - 2018-12-21
 
