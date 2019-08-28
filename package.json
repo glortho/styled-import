@@ -1,6 +1,6 @@
 {
   "name": "styled-import",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Extreme lightweight CSS parser for stealing rules from stylesheets (without adding the stylesheet to your bundle), to compose into Styled Components or anywhere else you might be doing CSS in JS.",
   "author": "jed@dataverse.me",
   "repository": "https://github.com/glortho/styled-import",
